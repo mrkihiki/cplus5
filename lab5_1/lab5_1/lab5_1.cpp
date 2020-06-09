@@ -14,8 +14,8 @@ using namespace std;
 
 struct spik {
 	float s = 0;
-	string imya = " ";
 	string fam = " ";
+	string imya = " ";
 	string otch = " ";
 	string raion = " ";
 	int stoimost = 0;
@@ -53,7 +53,7 @@ int main()
 	{
 		getline(vod, x);
 		istringstream iss(x);//поток ввода
-		iss >> s.s >> s.imya >> s.fam >> s.otch >> s.raion >> s.stoimost;
+		iss >> s.s >> s.fam >> s.imya >> s.otch >> s.raion >> s.stoimost;
 		Arr[i] = s;
 
 	}
@@ -63,8 +63,8 @@ int main()
 	for (size_t n = 0; n < l; n++)
 	{
 		cout << "Площадь : " << Arr[n].s << " "
-			<< "Имя : " << Arr[n].imya << " "
 			<< "Фамилия : " << Arr[n].fam << " "
+			<< "Имя : " << Arr[n].imya << " "
 			<< "Отчество : " << Arr[n].otch << " "
 			<< "Район : " << Arr[n].raion << " "
 			<< "Стоимость : " << Arr[n].stoimost << endl;
@@ -77,8 +77,8 @@ int main()
 		if (Arr[n].raion == "central")
 		{
 			cout << "Площадь : " << Arr[n].s << " "
-				<< "Имя : " << Arr[n].imya << " "
 				<< "Фамилия : " << Arr[n].fam << " "
+				<< "Имя : " << Arr[n].imya << " "
 				<< "Отчество : " << Arr[n].otch << " "
 				<< "Район : " << Arr[n].raion << " "
 				<< "Стоимость : " << Arr[n].stoimost << endl;
@@ -86,14 +86,14 @@ int main()
 	}
 	cout << "\nКвартиры стоимостью более 1000к отсортированная по алфавиту:\n" << endl;
 
-	sort(Arr, Arr + l, sor);
+	sort(Arr, Arr + l, sor);//сортировка
 	for (size_t n = 0; n < l; n++)
 	{
 		if (Arr[n].stoimost > 1000)
 		{
 			cout << "Площадь : " << Arr[n].s << " "
-				<< "Имя : " << Arr[n].imya << " "
 				<< "Фамилия : " << Arr[n].fam << " "
+				<< "Имя : " << Arr[n].imya << " "
 				<< "Отчество : " << Arr[n].otch << " "
 				<< "Район : " << Arr[n].raion << " "
 				<< "Стоимость : " << Arr[n].stoimost << endl;
